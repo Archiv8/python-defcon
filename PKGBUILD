@@ -11,8 +11,8 @@
 # ToDo: Add files: Tooling
 # FixMe: Namcap warnings and errors
 
-# Maintainer: Ross Clark <https://github.com/Archiv8/fontfinder/discussions>
-# Contributor: Ross Clark <https://github.com/Archiv8/fontfinder/discussions>
+# Maintainer: Ross Clark <https://github.com/Archiv8/python-defcon/discussions>
+# Contributor: Ross Clark <https://github.com/Archiv8/python-defcon/discussions>
 
 _langname="python"
 _relname="defcon"
@@ -24,7 +24,7 @@ pkgdesc="A set of UFO based objects for use in font editing applications"
 arch=(
   "any"
 )
-url="https://github.com/robotools/${_relname}"
+url="https://github.com/robotools/defcon"
 license=(
   "MIT"
 )
@@ -73,7 +73,7 @@ package() {
 
   cd "$_zipname"
 
-  python -m installer -d "$pkgdir" dist/*.whl
+  python -m installer -d "${pkgdir}" dist/*.whl
 
-  install -Dm0644 -t "$pkgdir/usr/share/licenses/$pkgname/" License.txt
+  install -Dm0644 -t "${pkgdir}/usr/share/licenses/${pkgname}/" License.txt
 }
